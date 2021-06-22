@@ -559,7 +559,6 @@ void main() {
 			<< "11 - Group order leaners" << endl
 			<< "12 - Name + fam + fath filter leaners" << endl
 			<< "13 - Name + fam + fath teachers" << endl
-			<< "9 - Эталонный обьект" << endl
 			<< "14 - Закрыть" << endl;
 		int buff;
 		scanf("%i", &buff);
