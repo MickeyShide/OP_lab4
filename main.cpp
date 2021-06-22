@@ -1,4 +1,4 @@
-#define debug 1
+#define debug 0
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <windows.h>
