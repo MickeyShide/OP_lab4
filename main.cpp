@@ -18,7 +18,7 @@ public:
 };
 FIO::FIO() {
 	if (debug == 1)
-		cout << "Debug: " << "Конструктор FIO" << endl;
+		cout << "Debug: " << "РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ FIO" << endl;
 	fam = new char[50];
 	strcpy(fam, " ");
 	name = new char[50];
@@ -28,7 +28,7 @@ FIO::FIO() {
 }
 FIO::~FIO() {
 	if (debug == 1)
-		cout << "Debug: " << "Деструктор FIO" << endl;
+		cout << "Debug: " << "Р”РµСЃС‚СЂСѓРєС‚РѕСЂ FIO" << endl;
 	delete[] fam;
 	delete[] name;
 	delete[] fath;
@@ -51,11 +51,11 @@ public:
 };
 Common::Common() {
 	if (debug == 1)
-		cout << "Debug: " << "Конструктор Common" << endl;
+		cout << "Debug: " << "РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Common" << endl;
 }
 Common::~Common() {
 	if (debug == 1)
-		cout << "Debug: " << "Денструктор Common" << endl;
+		cout << "Debug: " << "Р”РµРЅСЃС‚СЂСѓРєС‚РѕСЂ Common" << endl;
 }
 void Common::set_fam(char* new_fam) {
 	fio.fam = new char[strlen(new_fam) + 1];
@@ -96,7 +96,7 @@ public:
 int Leaner::count = 0;
 Leaner::Leaner() {
 	if (debug == 1)
-	cout << "Debug: " << "Конструктор Leaner" << endl;
+	cout << "Debug: " << "РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Leaner" << endl;
 	faculty = new char[50];
 	strcpy(faculty, " ");
 	group = 0;
@@ -104,7 +104,7 @@ Leaner::Leaner() {
 }
 Leaner::Leaner(char* fam, char* name, char* fath, char* fac, int group) {
 	if (debug == 1)
-		cout << "Debug: " << "Конструктор Leaner (с параметрами)" << endl;
+		cout << "Debug: " << "РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Leaner (СЃ РїР°СЂР°РјРµС‚СЂР°РјРё)" << endl;
 	this->set_fam(fam);
 	this->set_name(name);
 	this->set_fath(fath);
@@ -115,7 +115,7 @@ Leaner::Leaner(char* fam, char* name, char* fath, char* fac, int group) {
 }
 Leaner::~Leaner() {
 	if (debug == 1)
-	cout << "Debug: " << "Деструктор Leaner" << endl;
+	cout << "Debug: " << "Р”РµСЃС‚СЂСѓРєС‚РѕСЂ Leaner" << endl;
 	delete[] faculty;
 	group = 0;
 	count--;
@@ -143,25 +143,25 @@ Leaner* add_leaner(Leaner*& leaners) {
 	}
 	delete[] pointer;
 	char buff[50];
-	printf("%s", "Фамилия: ");
+	printf("%s", "Р¤Р°РјРёР»РёСЏ: ");
 	while (getc(stdin) != '\n');
 	scanf("%50[^\n]%*c", buff);
 	leaners[Leaner::count - 1].set_fam(buff);
 
-	printf("%s", "Имя: ");
+	printf("%s", "РРјСЏ: ");
 	scanf("%50[^\n]%*c", buff);
 	leaners[Leaner::count - 1].set_name(buff);
 
-	printf("%s", "Отчество: ");
+	printf("%s", "РћС‚С‡РµСЃС‚РІРѕ: ");
 	scanf("%50[^\n]%*c", buff);
 	leaners[Leaner::count - 1].set_fath(buff);
 
-	printf("%s", "Факультет: ");
+	printf("%s", "Р¤Р°РєСѓР»СЊС‚РµС‚: ");
 	scanf("%50[^\n]%*c", buff);
 	leaners[Leaner::count - 1].set_faculty(buff);
 
 	int buffg;
-	printf("%s", "Группа: ");
+	printf("%s", "Р“СЂСѓРїРїР°: ");
 	scanf("%i", &buffg);
 	leaners[Leaner::count - 1].set_group(buffg);
 	return leaners;
@@ -238,7 +238,7 @@ public:
 };
 Teacher::Teacher() {
 	if (debug == 1)
-		cout << "Debug: " << "Конструктор Teacher" << endl;
+		cout << "Debug: " << "РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Teacher" << endl;
 	cafedra = new char[50];
 	strcpy(cafedra, " ");
 	course = none;
@@ -246,7 +246,7 @@ Teacher::Teacher() {
 }
 Teacher::Teacher(char* fam, char* name, char* fath, char* cafedra, char* course) {
 	if (debug == 1)
-		cout << "Debug: " << "Конструктор Teacher (с параметрами)" << endl;
+		cout << "Debug: " << "РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Teacher (СЃ РїР°СЂР°РјРµС‚СЂР°РјРё)" << endl;
 	this->set_fam(fam);
 	this->set_name(name);
 	this->set_fath(fath);
@@ -256,7 +256,7 @@ Teacher::Teacher(char* fam, char* name, char* fath, char* cafedra, char* course)
 }
 Teacher::~Teacher() {
 	if (debug == 1)
-		cout << "Debug: " << "Деструктор Teacher" << endl;
+		cout << "Debug: " << "Р”РµСЃС‚СЂСѓРєС‚РѕСЂ Teacher" << endl;
 	delete[] cafedra;
 	course = none;
 	count--;
@@ -288,24 +288,24 @@ Teacher* add_teacher(Teacher*& teachers) {
 	}
 	delete[] pointer;
 	char buff[50];
-	printf("%s", "Фамилия: ");
+	printf("%s", "Р¤Р°РјРёР»РёСЏ: ");
 	while (getc(stdin) != '\n');
 	scanf("%50[^\n]%*c", buff);
 	teachers[Teacher::count - 1].set_fam(buff);
 
-	printf("%s", "Имя: ");
+	printf("%s", "РРјСЏ: ");
 	scanf("%50[^\n]%*c", buff);
 	teachers[Teacher::count - 1].set_name(buff);
 
-	printf("%s", "Отчество: ");
+	printf("%s", "РћС‚С‡РµСЃС‚РІРѕ: ");
 	scanf("%50[^\n]%*c", buff);
 	teachers[Teacher::count - 1].set_fath(buff);
 
-	printf("%s", "Кафедра: ");
+	printf("%s", "РљР°С„РµРґСЂР°: ");
 	scanf("%50[^\n]%*c", buff);
 	teachers[Teacher::count - 1].set_cafedra(buff);
 
-	printf("%s", "Курс: ");
+	printf("%s", "РљСѓСЂСЃ: ");
 	scanf("%50[^\n]%*c", buff);
 	teachers[Teacher::count - 1].set_course(buff);
 	if (debug==1)
@@ -334,18 +334,18 @@ Leaner* load_leaners(char* file_name)
 	Leaner* leaners = new Leaner[0];
 	FILE* file_pointer;
 	char buffs[50];
-	// Проверка на прошлые записи + загрузка
+	// РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРѕС€Р»С‹Рµ Р·Р°РїРёСЃРё + Р·Р°РіСЂСѓР·РєР°
 	if ((file_pointer = fopen(file_name, "rb+")) == NULL) {
-		printf("Файла нет!\n");
+		printf("Р¤Р°Р№Р»Р° РЅРµС‚!\n");
 		return leaners;
 	}
 	else {
-		printf("Файл найден!\n");
+		printf("Р¤Р°Р№Р» РЅР°Р№РґРµРЅ!\n");
 		if ((file_pointer = fopen(file_name, "r")) == NULL)
 		{
-			perror("Ошибка открытия файла");
+			perror("РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°");
 		}
-		// Перебор всего файла
+		// РџРµСЂРµР±РѕСЂ РІСЃРµРіРѕ С„Р°Р№Р»Р°
 		int intBuff;
 		char buff[50];
 		fscanf(file_pointer, "%s\n", buff);
@@ -373,8 +373,8 @@ Leaner* load_leaners(char* file_name)
 			sscanf(buff, "%d", &intBuff);
 			result[i].set_group(intBuff);
 		}
-		fclose(file_pointer); // закрыть файл
-		printf("Данные успешно загружены!\n");
+		fclose(file_pointer); // Р·Р°РєСЂС‹С‚СЊ С„Р°Р№Р»
+		printf("Р”Р°РЅРЅС‹Рµ СѓСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР¶РµРЅС‹!\n");
 		if (debug == 1)
 			cout << "Debug: " <<"Leaner::count = " << Leaner::count << endl;
 		delete[] leaners;
@@ -388,10 +388,10 @@ boolean save_leaners(Leaner* massive, char* file_name)
 	tw = massive;
 	if ((file_pointer = fopen(file_name, "w")) == NULL)
 	{
-		perror("Ошибка открытия файла: режим save_txt");
+		perror("РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°: СЂРµР¶РёРј save_txt");
 		return false;
 	}
-	// запись строк в текстовый файл
+	// Р·Р°РїРёСЃСЊ СЃС‚СЂРѕРє РІ С‚РµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р»
 	fprintf(file_pointer, "%i\n", Leaner::count);
 	for (tw = massive; tw < massive + Leaner::count; tw++)
 	{
@@ -409,18 +409,18 @@ Teacher* load_teachers(char* file_name)
 	Teacher* teachers = new Teacher[0];
 	FILE* file_pointer;
 	char buffs[50];
-	// Проверка на прошлые записи + загрузка
+	// РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРѕС€Р»С‹Рµ Р·Р°РїРёСЃРё + Р·Р°РіСЂСѓР·РєР°
 	if ((file_pointer = fopen(file_name, "rb+")) == NULL) {
-		printf("Файла нет!\n");
+		printf("Р¤Р°Р№Р»Р° РЅРµС‚!\n");
 		return teachers;
 	}
 	else {
-		printf("Файл найден!\n");
+		printf("Р¤Р°Р№Р» РЅР°Р№РґРµРЅ!\n");
 		if ((file_pointer = fopen(file_name, "r")) == NULL)
 		{
-			perror("Ошибка открытия файла");
+			perror("РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°");
 		}
-		// Перебор всего файла
+		// РџРµСЂРµР±РѕСЂ РІСЃРµРіРѕ С„Р°Р№Р»Р°
 		int intBuff;
 		char buff[50];
 		fscanf(file_pointer, "%s\n", buff);
@@ -446,8 +446,8 @@ Teacher* load_teachers(char* file_name)
 			fscanf(file_pointer, "%s\n", buff);
 			result[i].set_course(buff);
 		}
-		fclose(file_pointer); // закрыть файл
-		printf("Данные успешно загружены!\n");
+		fclose(file_pointer); // Р·Р°РєСЂС‹С‚СЊ С„Р°Р№Р»
+		printf("Р”Р°РЅРЅС‹Рµ СѓСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР¶РµРЅС‹!\n");
 		if (debug == 1)
 			cout << "Debug: " << "Teacher::count = " << Teacher::count << endl;
 		delete[] teachers;
@@ -461,10 +461,10 @@ boolean save_teachers(Teacher* massive, char* file_name)
 	tw = massive;
 	if ((file_pointer = fopen(file_name, "w")) == NULL)
 	{
-		perror("Ошибка открытия файла: режим save_txt");
+		perror("РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°: СЂРµР¶РёРј save_txt");
 		return false;
 	}
-	// запись строк в текстовый файл
+	// Р·Р°РїРёСЃСЊ СЃС‚СЂРѕРє РІ С‚РµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р»
 	fprintf(file_pointer, "%i\n", Teacher::count);
 	for (tw = massive; tw < massive + Teacher::count; tw++)
 	{
@@ -559,8 +559,8 @@ void main() {
 			<< "11 - Group order leaners" << endl
 			<< "12 - Name + fam + fath filter leaners" << endl
 			<< "13 - Name + fam + fath teachers" << endl
-			<< "9 - Эталонный обьект" << endl
-			<< "14 - Закрыть" << endl;
+			<< "9 - Р­С‚Р°Р»РѕРЅРЅС‹Р№ РѕР±СЊРµРєС‚" << endl
+			<< "14 - Р—Р°РєСЂС‹С‚СЊ" << endl;
 		int buff;
 		scanf("%i", &buff);
 		switch (buff) {
@@ -573,33 +573,33 @@ void main() {
 			break;
 		}
 		case 3: {
-			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "Номер", "Фамилия", "Имя", "Отчество", "Факультет", "Номер группы");
+			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "РќРѕРјРµСЂ", "Р¤Р°РјРёР»РёСЏ", "РРјСЏ", "РћС‚С‡РµСЃС‚РІРѕ", "Р¤Р°РєСѓР»СЊС‚РµС‚", "РќРѕРјРµСЂ РіСЂСѓРїРїС‹");
 			printf("%s\n", "-----------------------------------------------------------------");
 			for (int i = 0; i < Leaner::count; i++) {
 				printf("%-11d", i + 1);
 				cout << leaners[i];
 			}
 			printf("%s\n", "-----------------------------------------------------------------");
-			printf("Количество записей в базе: %i\n\n\n", Leaner::count);
+			printf("РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№ РІ Р±Р°Р·Рµ: %i\n\n\n", Leaner::count);
 			break;
 		}
 		case 4: {
-			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "Номер", "Фамилия", "Имя", "Отчество", "Кафедра", "Курс");
+			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "РќРѕРјРµСЂ", "Р¤Р°РјРёР»РёСЏ", "РРјСЏ", "РћС‚С‡РµСЃС‚РІРѕ", "РљР°С„РµРґСЂР°", "РљСѓСЂСЃ");
 			printf("%s\n", "-----------------------------------------------------------------");
 			for (int i = 0; i < Teacher::count; i++) {
 				printf("%-11d", i + 1);
 				cout << teachers[i];
 			}
 			printf("%s\n", "-----------------------------------------------------------------");
-			printf("Количество записей в базе: %i\n\n\n", Teacher::count);
+			printf("РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№ РІ Р±Р°Р·Рµ: %i\n\n\n", Teacher::count);
 			break;
 		}
 		case 5: {
 			char buff[50];
-			printf("Введите фамилию: ");
+			printf("Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ: ");
 			while (getc(stdin) != '\n');
 			scanf("%50[^\n]%*c", buff);
-			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "Номер", "Фамилия", "Имя", "Отчество", "Факультет", "Номер группы");
+			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "РќРѕРјРµСЂ", "Р¤Р°РјРёР»РёСЏ", "РРјСЏ", "РћС‚С‡РµСЃС‚РІРѕ", "Р¤Р°РєСѓР»СЊС‚РµС‚", "РќРѕРјРµСЂ РіСЂСѓРїРїС‹");
 			printf("%s\n", "-----------------------------------------------------------------");
 			for (int i = 0; i < Leaner::count; i++) {
 				if (leaners[i].by_fam(buff)) {
@@ -612,10 +612,10 @@ void main() {
 		}
 		case 6: {
 			char buff[50];
-			printf("Введите фамилию: ");
+			printf("Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ: ");
 			while (getc(stdin) != '\n');
 			scanf("%50[^\n]%*c", buff);
-			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "Номер", "Фамилия", "Имя", "Отчество", "Кафедра", "Курс");
+			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "РќРѕРјРµСЂ", "Р¤Р°РјРёР»РёСЏ", "РРјСЏ", "РћС‚С‡РµСЃС‚РІРѕ", "РљР°С„РµРґСЂР°", "РљСѓСЂСЃ");
 			printf("%s\n", "-----------------------------------------------------------------");
 			for (int i = 0; i < Teacher::count; i++) {
 				if (teachers[i].by_fam(buff)) {
@@ -628,9 +628,9 @@ void main() {
 		}
 		case 7: {
 			int buff;
-			printf("Введите группу: ");
+			printf("Р’РІРµРґРёС‚Рµ РіСЂСѓРїРїСѓ: ");
 			cin >> buff;
-			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "Номер", "Фамилия", "Имя", "Отчество", "Факультет", "Номер группы");
+			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "РќРѕРјРµСЂ", "Р¤Р°РјРёР»РёСЏ", "РРјСЏ", "РћС‚С‡РµСЃС‚РІРѕ", "Р¤Р°РєСѓР»СЊС‚РµС‚", "РќРѕРјРµСЂ РіСЂСѓРїРїС‹");
 			printf("%s\n", "-----------------------------------------------------------------");
 			for (int i = 0; i < Leaner::count; i++) {
 				if (leaners[i].by_group(buff)) {
@@ -643,10 +643,10 @@ void main() {
 		}
 		case 8: {
 			char buff[50];
-			printf("Введите факультет: ");
+			printf("Р’РІРµРґРёС‚Рµ С„Р°РєСѓР»СЊС‚РµС‚: ");
 			while (getc(stdin) != '\n');
 			scanf("%50[^\n]%*c", buff);
-			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "Номер", "Фамилия", "Имя", "Отчество", "Факультет", "Номер группы");
+			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "РќРѕРјРµСЂ", "Р¤Р°РјРёР»РёСЏ", "РРјСЏ", "РћС‚С‡РµСЃС‚РІРѕ", "Р¤Р°РєСѓР»СЊС‚РµС‚", "РќРѕРјРµСЂ РіСЂСѓРїРїС‹");
 			printf("%s\n", "-----------------------------------------------------------------");
 			for (int i = 0; i < Leaner::count; i++) {
 				if (leaners[i].by_faculty(buff)) {
@@ -681,7 +681,7 @@ void main() {
 			cout << "fath: ";
 			cin >> buff;
 			strcpy(fio->fath, buff);
-			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "Номер", "Фамилия", "Имя", "Отчество", "Факультет", "Номер группы");
+			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "РќРѕРјРµСЂ", "Р¤Р°РјРёР»РёСЏ", "РРјСЏ", "РћС‚С‡РµСЃС‚РІРѕ", "Р¤Р°РєСѓР»СЊС‚РµС‚", "РќРѕРјРµСЂ РіСЂСѓРїРїС‹");
 			printf("%s\n", "-----------------------------------------------------------------");
 			for (int i = 0; i < Leaner::count; i++) {
 				if (leaners[i] == fio) {
@@ -705,7 +705,7 @@ void main() {
 			cout << "fath: ";
 			cin >> buff;
 			strcpy(fio->fath, buff);
-			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "Номер", "Фамилия", "Имя", "Отчество", "Кафедра", "Курс");
+			printf("\n\n%-10s %-10s %-10s %-10s %-10s %s\n", "РќРѕРјРµСЂ", "Р¤Р°РјРёР»РёСЏ", "РРјСЏ", "РћС‚С‡РµСЃС‚РІРѕ", "РљР°С„РµРґСЂР°", "РљСѓСЂСЃ");
 			printf("%s\n", "-----------------------------------------------------------------");
 			for (int i = 0; i < Teacher::count; i++) {
 				if (teachers[i] == fio) {
